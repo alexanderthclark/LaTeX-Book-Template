@@ -1,0 +1,37 @@
+% Update these every term
+\newcommand{\code}[1]{\lstinline[language = Python]{#1}}
+\newcommand{\link}[2]{\textcolor{blue}{\href{#1}{#2}}}
+
+% margin notes for file names
+\usepackage{mparhack}
+
+% for inserting label into inlinelisting
+\newcommand{\margintextB}[1]{
+\marginnote{\scalebox{0.76}{\texttt{#1}}}}
+
+\newcommand{\margintext}[1]{\marginpar{\scalebox{0.65}{\texttt{#1}}}}
+
+\newcommand{\margintextC}[1]{
+\marginpar[]{\rotatebox{270}{\hspace{-6pt}\scalebox{0.9}{\texttt{#1}}}}}
+
+% Abandoned but here anyway ----------------------------
+
+% for referencing a py file directly
+\newcommand{\pyfileBB}[2]{
+\lstinputlisting[language = Python, caption={[#2.py]{}}]{#1}\marginnote{\rotatebox{270}\scalebox{0.9}{\code{#2}}}}
+
+\newcommand{\pyfile}[2]{
+\lstinputlisting[language = Python, caption={[#2.py]{}}]{#1}\marginnote{\rotatebox{270}{\hspace{4pt}\scalebox{0.9}{\code{#2}}}}
+}
+
+\newcommand{\pyfilealt}[2]{\marginnote{\rotatebox{270}{\hspace{11pt}\scalebox{0.9}{\code{#2}}}}
+\lstinputlisting[language = Python, caption={[#2.py]{}}]{#1}}
+
+%%% for notebook-like tex
+% https://tex.stackexchange.com/question/223465/ipython-notebook-cells-with-listings
+%\newcommand{\output}[1]{\begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+%\prompt{Out}{outcolor}{1}{\boxspacing}
+%\begin{Verbatim}[commandchars=\\\{\}]
+%[#1]
+%\end{Verbatim}
+%\end{tcolorbox}}
