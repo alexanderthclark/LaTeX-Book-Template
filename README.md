@@ -12,3 +12,14 @@ The value added is just in gathering a few different things. The advantages over
 
 
 Some more things in the style files could be removed for the example included. I have experimented with `\marginpar` and `\marginnote` to label code blocks with the filenames. While not demonstrated here, my solution has been to use `(*@\margintext{filename}@*)` inside the code blocks, where `(*@` and `@*)` are escape characters. `\margintext` is a custom command that uses `\marginnote` with some extra text formatting. Previously, I tried to use `\marginpar` to force all labels to the right and rotate them 90 degrees, but I was never happy with the results. 
+
+### Compilation
+
+This compiles without any trouble on Overleaf. If you are compiling locally and have trouble with the bibliography, use the following.
+
+```
+pdflatex main
+biber main
+pdflatex main
+pdflatex main
+```
