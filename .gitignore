@@ -1,0 +1,8 @@
+# Ignore LaTeX intermediate and output files
+*.aux
+*.log
+*.toc
+*.out
+*.synctex.gz
+*.fdb_latexmk
+*.fls
